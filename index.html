@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resume</title>
+    <title>Resume</title>
     <style>
         /* General Styles */
         body {
@@ -39,24 +39,47 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInContent 1s forwards;
         }
 
         .container {
             width: 60%;
-            animation: slideInLeft 1.5s ease-out;
         }
 
         .right-container {
             width: 25%;
-            animation: slideInRight 1.5s ease-out;
         }
 
+        @keyframes fadeInContent {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animations */
         h1, h2, h3 {
             animation: fadeIn 2s ease-out;
         }
 
         ul li {
             animation: fadeIn 2s ease-out;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: #3498db;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #2980b9;
+        }
+
+        /* Add Hover Effects */
+        .container:hover, .right-container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
         }
 
         /* Responsive Design */
